@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Lighthouse Analyzer",
+    "descripcion": "Plugin WordPress con informes de rendimiento y plantilla de correo HTML.",
+    "enlaces": { "repo": "https://github.com/Aissa-17", "demo": "#" },
+    "stack": ["PHP", "WordPress", "Lighthouse", "MySQL"]
+  },
+  {
+    "titulo": "Montaventura Booking",
+    "descripcion": "Reservas en WP con pagos, cupones y calendarios.",
+    "enlaces": { "repo": "#", "demo": "#" },
+    "stack": ["PHP", "WooCommerce", "Stripe"]
+  },
+  {
+    "titulo": "ERPNext + PrestaShop",
+    "descripcion": "Sincronización de stock y automatizaciones en VPS.",
+    "enlaces": { "repo": "#", "demo": "#" },
+    "stack": ["Docker", "VPS", "MySQL"]
+  }
+]

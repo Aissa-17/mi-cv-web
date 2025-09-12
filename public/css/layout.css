@@ -1,0 +1,35 @@
+/* Barra superior */
+.barra { position: sticky; top: 0; z-index: 10; background: rgba(11,18,32,.8); backdrop-filter: blur(6px); border-bottom: 1px solid var(--borde); }
+.barra__contenido { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.marca { font-weight: 700; letter-spacing: .4px; }
+.menu { display: flex; gap: 14px; align-items: center; }
+.icono { opacity: .9; }
+.hamburguesa { display: none; background: transparent; color: var(--texto); border: 1px solid var(--borde); border-radius: 10px; padding: 6px 10px; }
+
+/* Main */
+.main { padding-top: 24px; }
+
+/* Hero */
+.hero { display: grid; gap: 18px; grid-template-columns: 1.3fr .7fr; align-items: center; }
+.hero__titulo { display: grid; gap: 14px; }
+.hero__botones { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero__foto { justify-self: end; width: 220px; height: 220px; border-radius: 20px; overflow: hidden; border: 1px solid var(--borde); box-shadow: var(--sombra); }
+
+.seccion { margin-top: 36px; }
+.habilidades { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Pie */
+.pie { margin-top: 40px; border-top: 1px solid var(--borde); }
+.pie__contenido { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero__foto { justify-self: start; width: 160px; height: 160px; }
+}
+@media (max-width: 760px) {
+  .menu { display: none; }
+  .menu.abierto { display: flex; flex-direction: column; background: var(--fondo-2); position: absolute; right: 20px; top: 60px; padding: 14px; border: 1px solid var(--borde); border-radius: 12px; }
+  .hamburguesa { display: inline-flex; }
+}
+.hero__foto img { object-fit: cover; width: 100%; height: 100%; filter: saturate(1.05); }

@@ -1,0 +1,69 @@
+/* Cards simples y listas */
+.lista-simple { display: grid; gap: 10px; }
+.lista-simple li { padding: 10px 12px; background: #0e1a2c; border: 1px solid var(--borde); border-radius: 12px; }
+
+/* Chips de stack */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--borde); background: #0f1b2e; color: var(--texto); font-size: .92rem; }
+.float-cta {
+  position: fixed; right: 18px; bottom: 18px; z-index: 20;
+  background: var(--primario); color: #06101d; border: none; border-radius: 999px;
+  padding: 12px 16px; box-shadow: var(--sombra); font-weight: 700;
+}
+/* Timeline vertical con alternancia en desktop */
+.timeline { position: relative; margin-top: 24px; }
+.timeline::before {
+  content: ""; position: absolute; left: 24px; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(to bottom, #203149, #142132);
+  border-radius: 2px;
+}
+.t-item { position: relative; padding-left: 64px; margin-bottom: 22px; }
+.t-dot{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:16px;height:16px;border-radius:50%;
+  background:var(--primario);
+  box-shadow:0 0 0 4px rgba(62,166,255,.15);
+  z-index:3;                 /* por encima de la línea, por debajo del texto si añades z-index en .t-card */
+  pointer-events:none;
+}
+.t-card {
+  background: var(--fondo-2); border: 1px solid var(--borde); border-radius: var(--radio);
+  padding: 14px 16px; box-shadow: var(--sombra); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.t-card h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.t-card p { margin-top: 4px; color: var(--texto-suave); }
+/* Base (móvil): línea y dots a la izquierda */
+.timeline::before{ left:24px; }
+.t-item{ position: relative; padding-left:64px; margin-bottom:22px; }
+.t-item .t-dot{
+  position:absolute; top:50%; transform:translateY(-50%);
+  left:16px; width:16px; height:16px; border-radius:50%;
+  background:var(--primario); box-shadow:0 0 0 4px rgba(62,166,255,.15);
+  z-index:3; pointer-events:none;
+}
+
+/* Desktop: alternancia y dot sobre el eje central */
+@media (min-width:900px){
+  .timeline{ position:relative; padding-inline:24px; }
+  .timeline::before{ left:50%; }
+
+  .t-item{ position:relative; width:50%; padding-left:0; margin-bottom:26px; }
+  .t-item:nth-child(odd){  padding-right:40px; text-align:right; }
+  .t-item:nth-child(even){ margin-left:auto; padding-left:40px; text-align:left; }
+
+  /* Dot justo en el borde de la columna (coincide con el eje) */
+  .t-item:nth-child(odd)  .t-dot{ left:calc(100% - 8px); } /* borde derecho */
+  .t-item:nth-child(even) .t-dot{ left:-8px; }             /* borde izquierdo */
+
+  /* Separa las cards del eje para que el dot no las pise */
+  .t-card{ position:relative; z-index:2; }
+  .t-item:nth-child(odd)  .t-card{ margin-right:36px; }
+  .t-item:nth-child(even) .t-card{ margin-left:36px; }
+}
+
+/* Stagger: usa --d como delay */
+@media (prefers-reduced-motion: no-preference) {
+  .js .revelar { transition-delay: var(--d, 0s); }
+}

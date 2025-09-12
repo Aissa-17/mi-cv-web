@@ -1,0 +1,43 @@
+/* Reset mínimo */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+:root {
+  --fondo: #0b1220;
+  --fondo-2: #0f1a2b;
+  --texto: #e6e9f0;
+  --texto-suave: #b6bfd3;
+  --primario: #3ea6ff;
+  --primario-2: #2f82c5;
+  --borde: #1d2840;
+  --ok: #35d49a;
+  --alerta: #ffb84d;
+  --radio: 14px;
+  --sombra: 0 10px 30px rgba(0,0,0,.35);
+  --ancho: 1100px;
+  --gap: 18px;
+  --fuente: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+}
+body.tema-oscuro { background: var(--fondo); color: var(--texto); font-family: var(--fuente); line-height: 1.5; }
+.contenedor { width: min(100%, var(--ancho)); margin-inline: auto; padding: 20px; }
+/* Tipos */
+h1 { font-size: 2.4rem; letter-spacing: .2px; }
+h2 { font-size: 1.8rem; margin-bottom: 8px; }
+p  { color: var(--texto-suave); }
+/* Utilidades */
+.badge { padding: 8px 12px; background: #0e1b31; border: 1px solid var(--borde); border-radius: 999px; font-size: .92rem; }
+.grid { display: grid; gap: var(--gap); }
+.btn { padding: 10px 16px; border-radius: 10px; border: 1px solid var(--borde); background: var(--fondo-2); color: var(--texto); box-shadow: var(--sombra); }
+.btn--primario { background: var(--primario); border-color: transparent; color: #08111d; font-weight: 600; }
+.btn--fantasma { background: transparent; }
+.card { background: var(--fondo-2); border: 1px solid var(--borde); border-radius: var(--radio); padding: 18px; box-shadow: var(--sombra); }
+/* Animaciones sutiles y accesibles */
+@media (prefers-reduced-motion: no-preference) {
+  .revelar { opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
+  .aparece { opacity: 1; transform: translateY(0); }
+  .card { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(0,0,0,.45); border-color: #25406b; }
+  .btn { transition: transform .15s ease, filter .15s ease, background .15s ease; }
+  .btn:active { transform: translateY(1px) scale(0.99); }
+  .btn--primario:hover { filter: brightness(1.05); }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "rol": "Desarrollador Full Stack",
+    "empresa": "KORPUX",
+    "periodo": "abr. 2025 – sept. 2025 · Remoto",
+    "resumen": "PHP/WordPress, APIs/ERP, despliegue en Docker/VPS."
+  },
+  {
+    "rol": "Diseñador Web",
+    "empresa": "Agencia Krece",
+    "periodo": "mar. 2025 – jun. 2025 · Remoto",
+    "resumen": "WordPress + SEO, rendimiento y accesibilidad."
+  },
+  {
+    "rol": "Técnico Informático",
+    "empresa": "App Alpedrete",
+    "periodo": "abr. 2023 – jun. 2023 · Presencial",
+    "resumen": "Soporte, reparación y mantenimiento de sistemas."
+  }
+]
