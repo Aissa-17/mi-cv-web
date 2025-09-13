@@ -10,7 +10,7 @@ include __DIR__ . '/parciales/cabecera.php';
     </h1>
     <p>
       Desarrollo sitios y soluciones en <strong>PHP + WordPress</strong>, con despliegue en <strong>Docker/VPS</strong>,
-      optimización SEO y buenas prácticas de rendimiento. Código claro, humano y mantenible.
+      optimización SEO y buenas prácticas de rendimiento. Código claro y mantenible.
     </p>
     <div class="hero__botones">
       <a class="btn btn--primario" href="/proyectos.php">Ver proyectos</a>
@@ -29,9 +29,9 @@ include __DIR__ . '/parciales/cabecera.php';
   <p>Stack actual y herramientas con las que trabajo a diario.</p>
   <div class="chips" style="margin-top:10px">
     <span class="chip">PHP</span><span class="chip">WordPress</span><span class="chip">WooCommerce</span>
-    <span class="chip">MySQL</span><span class="chip">HTML5/CSS3</span><span class="chip">JavaScript</span>
-    <span class="chip">Docker</span><span class="chip">Nginx</span><span class="chip">VPS (Hetzner/IONOS)</span>
-    <span class="chip">SEO · Lighthouse</span><span class="chip">Git/GitHub</span>
+    <span class="chip">MySQL</span><span class="chip">HTML/CSS</span><span class="chip">GIT/GitHub</span><span class="chip">JavaScript</span>
+    <span class="chip">Docker</span><span class="chip">Nginx</span><span class="chip">VPS</span><span class="chip">SEO</span>
+    <span class="chip">Odoo</span><span class="chip">JAVA</span><span class="chip">Prestashop</span><span class="chip">n8n</span>
   </div>
 </section>
 

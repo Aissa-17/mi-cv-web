@@ -1,20 +1,39 @@
 [
   {
-    "titulo": "Lighthouse Analyzer",
-    "descripcion": "Plugin WordPress con informes de rendimiento y plantilla de correo HTML.",
-    "enlaces": { "repo": "https://github.com/Aissa-17", "demo": "#" },
-    "stack": ["PHP", "WordPress", "Lighthouse", "MySQL"]
+    "titulo": "Tera Software",
+    "descripcion": "Web moderna tipo agencia tech. Desarrollo de marca, landing y blog.",
+    "stack": ["PHP", "JavaScript", "HTML/CSS", "Docker"],
+    "imagen": "/img/proyectos/tera-software.png",
+    "enlaces": {
+      "repo": "https://github.com/Aissa-17/tera-software",
+      "demo": "#"
+    }
   },
   {
-    "titulo": "Montaventura Booking",
-    "descripcion": "Reservas en WP con pagos, cupones y calendarios.",
-    "enlaces": { "repo": "#", "demo": "#" },
-    "stack": ["PHP", "WooCommerce", "Stripe"]
+    "titulo": "Validador Web",
+    "descripcion": "Herramienta en PHP/JS para validar URLs, SEO básico y rendimiento.",
+    "stack": ["PHP", "JavaScript"],
+    "imagen": "/img/proyectos/validadorweb.png",
+    "enlaces": {
+      "repo": "https://github.com/JuanIbanezDAM/validarWebs"
+    }
   },
   {
-    "titulo": "ERPNext + PrestaShop",
-    "descripcion": "Sincronización de stock y automatizaciones en VPS.",
-    "enlaces": { "repo": "#", "demo": "#" },
-    "stack": ["Docker", "VPS", "MySQL"]
+    "titulo": "Montaventura",
+    "descripcion": "Sistema de reservas online para actividades de esquí y excursiones. Integración con Stripe.",
+    "stack": ["PHP", "JavaScript", "HTML/CSS", "Stripe", "WordPress"],
+    "imagen": "/img/proyectos/montaventura.png",
+    "enlaces": {
+      "repo": "https://github.com/Aissa-17/montaventura"
+    }
+  },
+  {
+    "titulo": "Entre Mascotas",
+    "descripcion": "Proyecto para automatizar el estado de los productos, stock y precios a tiempo real.",
+    "stack": ["n8n", "JSON", "Prestashop", "ERPNext"],
+    "imagen": "/img/proyectos/entremascotas.png",
+    "enlaces": {
+      "repo": "https://github.com/Aissa-17/entremascotas"
+    }
   }
 ]
