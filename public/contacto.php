@@ -16,7 +16,7 @@ $error= isset($_GET['error']);
     <div class="card" style="border-left:4px solid #ff6b6b;">No se pudo enviar. Inténtalo de nuevo.</div>
   <?php endif; ?>
 
-  <form class="card" action="/servidor/procesar-contacto.php" method="post" style="margin-top:12px;">
+  <form class="card" action="/procesar-contacto.php" method="post" style="margin-top:12px;">
     <div class="grid" style="grid-template-columns:1fr 1fr;">
       <label>Nombre
         <input name="nombre" required style="width:100%; padding:10px; margin-top:6px; border-radius:10px; border:1px solid var(--borde); background:#0e1a2c; color:var(--texto);">

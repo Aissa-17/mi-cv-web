@@ -64,6 +64,28 @@ $experiencia = is_file($rutaExp) ? json_decode(file_get_contents($rutaExp), true
   </div>
 </section>
 
+<?php
+$rutaEst = __DIR__ . '/../datos/estudios.json';
+$estudios = is_file($rutaEst) ? json_decode(file_get_contents($rutaEst), true) : [];
+?>
+<section class="contenedor seccion revelar" style="--d:.05s">
+  <h2>Estudios</h2>
+  <div class="timeline" style="margin-top:10px">
+    <?php foreach ($estudios as $i => $e): ?>
+      <div class="t-item revelar" style="--d: <?= 0.08 * ($i+1) ?>s">
+        <span class="t-dot"></span>
+        <article class="t-card">
+          <h3><?= htmlspecialchars($e['titulo']) ?> · 
+              <span style="color:var(--primario)"><?= htmlspecialchars($e['centro']) ?></span></h3>
+          <small style="opacity:.8"><?= htmlspecialchars($e['periodo']) ?></small>
+          <p><?= htmlspecialchars($e['resumen']) ?></p>
+        </article>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</section>
+
+
 <section class="contenedor seccion revelar">
   <h2>¿Hablamos?</h2>
   <p>Puedo incorporarme rápido. Respondo por email y LinkedIn.</p>
